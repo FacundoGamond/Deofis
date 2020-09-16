@@ -16,4 +16,8 @@ export class AppComponent {
   getMarca(event) {
     this.productsSideBar = event;
   }
+
+  getMarcaHeader(event){
+    this.productsSideBar = event;
+  }
 }

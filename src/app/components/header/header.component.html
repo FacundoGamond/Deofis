@@ -13,9 +13,9 @@
         </ul>
     </nav>
     <div id="browser">
-        <form>
-            <input type="text" name="article" placeholder="Busca tu producto!">
-            <span>L</span>
+        <form #browserForm="ngForm" (ngSubmit)="onSubmit(browserForm)">
+            <input type="text" name="article" placeholder="Busca tu producto!" #name="ngModel" [(ngModel)]="browser" required>
+            <input type="submit" value="L">
         </form>
     </div>
 
