@@ -3,10 +3,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-//Modelos
-import { Product } from '../models/product'
-
-
 //Url api
 import { Global } from './global';
 
