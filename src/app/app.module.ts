@@ -12,6 +12,7 @@ import { OfertsComponent } from './components/oferts/oferts.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { ProductsComponent } from './components/products/products.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     OfertsComponent,
     SliderComponent,
     ProductsComponent,
-    SidebarComponent
+    SidebarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
