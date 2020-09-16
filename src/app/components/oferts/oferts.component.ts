@@ -24,6 +24,7 @@ export class OfertsComponent implements OnInit {
     if (localStorage.getItem("ofert") == "true") {
       this.close = true
     }
+    localStorage.setItem("ofert", "true")
   }
 
   closeOfert() {
