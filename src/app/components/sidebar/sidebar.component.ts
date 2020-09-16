@@ -1,15 +1,38 @@
 import { Component, OnInit } from '@angular/core';
 
+//servicios
+import { ProductService } from '../../services/product.service';
+import { Global } from '../../services/global';
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss']
+  styleUrls: ['./sidebar.component.scss'],
+  providers: [ProductService]
 })
 export class SidebarComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  public products: Array<any>
+  public url: string
+  constructor(private _projectService: ProductService) {
+    this.url = Global.url;
+    this.products = []
   }
 
+  ngOnInit(): void {
+    this.getProducts();
+  }
+
+  getProducts() {
+    this._projectService.getDestacados().subscribe(
+      res => {
+        if (res) {
+          this.products = res;
+        }
+      },
+      err => {
+        console.log(err);
+      }
+    )
+
+  }
 }

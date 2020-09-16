@@ -270,6 +270,7 @@ body {
             float: left;
             margin-left: 2%;
             margin-bottom: 20px;
+            transition: 300ms all;
 
             #ofert-product {
                 display: block;
@@ -333,6 +334,11 @@ body {
                 }
 
             }
+        }
+
+        article:hover{
+            transform: scale(1.05);
+            cursor: pointer;
         }
 
     }

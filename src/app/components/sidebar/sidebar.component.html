@@ -2,9 +2,7 @@
     <h3>Categorias</h3>
     <form>
         <select name="category">
-            <option value="all">Elegir categoría</option>
-            <option value="gpu">Tarjeta de Video</option>
-            <option value="microprocessor">Microprocesador</option>
+            <option *ngFor="let product of products" value="{{product.marca.nombre}}">{{product.marca.nombre}}</option>
         </select>
     </form>
 </div>
