@@ -1,7 +1,12 @@
 <section id="products">
-<article>
-    <img src="https://via.placeholder.com/250" alt="">
-    <h4>Nombre</h4>
-    <p>descripcion</p>
-</article>
+    <article *ngFor="let product of products">
+        <div id="ofert-product">
+            Oferta! ${{product.precio}}
+        </div>
+        <div id="product">
+            <img src="https://via.placeholder.com/250" alt="">
+            <h4>{{product.nombre}}</h4>
+            <p>{{product.descripcion}}</p>
+        </div>
+    </article>
 </section>

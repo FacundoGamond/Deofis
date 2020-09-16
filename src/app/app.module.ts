@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { FormsModule } from '@angular/forms'; //Modulo para poder usar el ngModule
+import { HttpClientModule } from '@angular/common/http'; //Para poder hacer peticiones ajax
+
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -20,7 +24,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
   ],
   imports: [
     BrowserModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

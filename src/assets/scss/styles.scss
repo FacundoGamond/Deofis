@@ -212,7 +212,7 @@ body {
     width: 95%;
     text-align: center;
     margin: 0px auto;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 40px;
     color: #444;
     border-bottom: 1px solid #ccc;
@@ -220,13 +220,14 @@ body {
 
 #center {
     display: block;
-    width: 90%;
+    width: 100%;
     margin: 0px auto;
+    margin-left: 5%;
 
     #sidebar {
         display: block;
-        position: fixed;
-        width: 20%;
+        float: left;
+        width: 18%;
         background-color: white;
         min-height: 200px;
         border-radius: 10px;
@@ -260,26 +261,79 @@ body {
 
     #products {
         display: block;
-        width: 70%;
-        margin-left: 30%;
+        float: right;
+        width: 80%;
         min-height: 1000px;
 
         article {
             display: block;
-            width: 270px;
-            height: 325px;
-            background-color: white;
-            padding: 10px;
-            border-radius: 20px;
-            box-shadow: 0px 0px 5px #ccc;
-            color: #444;
+            float: left;
+            margin-left: 2%;
+            margin-bottom: 20px;
 
-            img {
+            #ofert-product {
                 display: block;
-                width: 250px;
-                margin: 0px auto;
-                border-radius: 20px;
+                width: 290px;
+                height: 40px;
+                border-radius: 20px 20px 0px 0px;
+                background-color: orangered;
+                color: white;
+                line-height: 40px;
+                text-align: center;
+                animation-name: colorOferta;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes colorOferta {
+                0% {
+                    background-color: orangered;
+                }
+
+                50% {
+                    background-color: rgb(255, 112, 60);
+                }
+
+                100% {
+                    background-color: orangered;
+                }
+            }
+
+            #product {
+                display: block;
+                width: 270px;
+                height: 350px;
+                background-color: white;
+                padding: 10px;
+                border-radius: 0px 0px 20px 20px;
+                box-shadow: 0px 0px 5px #ccc;
+                color: #444;
+
+                img {
+                    display: block;
+                    width: 250px;
+                    margin: 0px auto;
+                    border-radius: 20px;
+                }
+
+                h4 {
+                    display: block;
+                    width: 90%;
+                    margin: 0px auto;
+                    text-align: center;
+                    margin-top: 10px;
+                    border-bottom: 1px solid #ccc;
+                }
+
+                p {
+                    display: block;
+                    margin-top: 20px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+
             }
         }
+
     }
 }
