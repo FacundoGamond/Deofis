@@ -13,7 +13,7 @@ import { Global } from '../../services/global';
 export class SidebarComponent implements OnInit {
   @Output() getMarcaSidebar = new EventEmitter();
 
-  public categoria: string
+  public marcaGlobo: string
   public productsFind: Array<any>
   public products: Array<any>
   public url: string
@@ -21,6 +21,7 @@ export class SidebarComponent implements OnInit {
     this.url = Global.url;
     this.products = []
     this.productsFind = []
+    this.marcaGlobo = 'all'
   }
 
   ngOnInit(): void {
@@ -43,6 +44,7 @@ export class SidebarComponent implements OnInit {
 
   getMarca(marca) {
     if (marca != "all") {
+      this.marcaGlobo = marca
       this._projectService.getMarca(marca).subscribe(
         res => {
           if (res) {
@@ -55,10 +57,9 @@ export class SidebarComponent implements OnInit {
         }
       );
     } else {
-      console.log("igual")
       this.productsFind = []
       this.getMarcaSidebar.emit(this.productsFind)
+      this.marcaGlobo = 'all'
     }
-
   }
 }

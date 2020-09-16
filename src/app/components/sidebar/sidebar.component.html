@@ -3,7 +3,13 @@
     <form>
         <select name="category">
             <option value="" (click)="getMarca('all')">Todas...</option>
-            <option *ngFor="let product of products" value="{{product.marca.nombre}}" (click)="getMarca(product.marca.nombre)">{{product.marca.nombre}}</option>
+            <option value="Samsung" (click)="getMarca('Samsung')">Samsung</option>
+            <option value="iPhone" (click)="getMarca('iPhone')">iPhone</option>
+            <option value="Stanley" (click)="getMarca('Stanley')">Stanley</option>
         </select>
     </form>
+
+    <div id="marca" *ngIf="marcaGlobo!='all'">
+        {{marcaGlobo}}
+    </div>
 </div>

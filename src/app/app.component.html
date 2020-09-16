@@ -1,8 +1,9 @@
 <app-header></app-header>
 <app-oferts></app-oferts>
 <app-slider></app-slider>
+
+<h1 id="title-destacados">¡Aprovechá nuestros productos destacados de la semana!</h1>
 <section id="center">
-    <h1 id="title-destacados">Aprovechá nuestros productos destacados de esta semana!</h1>
     <app-sidebar (getMarcaSidebar)="getMarca($event)"></app-sidebar>
     <app-products [productsSideBar]="productsSideBar"></app-products>
 </section>
