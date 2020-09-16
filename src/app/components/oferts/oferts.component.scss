@@ -1,33 +1,43 @@
-#total{
+#total {
     position: fixed;
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.664);
     z-index: 99;
 
-    #ofert{
+    #ofert {
         display: block;
         width: 35%;
-        height: 400px;
-        background-color: goldenrod;
+        height: 500px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.164),
+                rgba(0, 0, 0, 0.5)), url(../../../assets/images/ofert-color2.jpg);
         margin: 0px auto;
         text-align: center;
         color: white;
         margin-top: 15vh;
         border-radius: 5px;
 
-        span{
+        span {
             display: block;
             font-family: "Breezi";
             height: 30px;
             width: 30px;
             text-align: center;
             line-height: 30px;
-            border-radius: 999px;
+            border-radius: 5px;
             background-color: rgb(126, 96, 19);
+            cursor: pointer;
+            transition: 300ms all;
         }
 
-        h1{
+        span:hover{
+            transform: scale(1.1);
+            color: #444;
+            background-color: white;
+        }
+
+
+        h1 {
             display: block;
             width: 80%;
             margin: 0px auto;
@@ -36,11 +46,19 @@
             margin-bottom: 20px;
         }
 
-        p{
+        p {
             display: block;
             width: 70%;
+            margin: 0px auto;
+            margin-bottom: 20px;
+        }
+
+        carousel {
+            display: block;
+            width: 80%;
             margin: 0px auto;
         }
 
     }
 }
+

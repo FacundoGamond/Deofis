@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -12,7 +13,8 @@ import { OfertsComponent } from './components/oferts/oferts.component';
     OfertsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    IvyCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

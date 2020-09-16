@@ -1,8 +1,9 @@
-<section id="total">
+<section id="total" *ngIf="!close">
     <div id="ofert">
-        <span>x</span>
+        <span (click)="closeOfert()">x</span>
         <h1>¡DESCUENTOS!</h1>
-        <p><strong>¡Solo por este finde!</strong> Descuentos de hasta un 35% en tecnoligia</p>
+        <p><strong>¡Solo por este finde!</strong> Descuentos de hasta un 35% en tecnología</p>
+        <carousel [images]="images" loop="true" autoplay="true" autoplayInterval="3000" cellsToShow="1" height='300' borderRadius='10'>
+        </carousel>
     </div>
-
 </section>
