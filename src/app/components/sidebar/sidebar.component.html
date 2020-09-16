@@ -1,8 +1,9 @@
 <div id="sidebar">
-    <h3>Categorias</h3>
+    <h3>Marcas</h3>
     <form>
         <select name="category">
-            <option *ngFor="let product of products" value="{{product.marca.nombre}}">{{product.marca.nombre}}</option>
+            <option value="" (click)="getMarca('all')">Todas...</option>
+            <option *ngFor="let product of products" value="{{product.marca.nombre}}" (click)="getMarca(product.marca.nombre)">{{product.marca.nombre}}</option>
         </select>
     </form>
 </div>

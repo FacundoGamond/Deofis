@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 //servicios
 import { ProductService } from '../../services/product.service';
@@ -11,6 +11,8 @@ import { Global } from '../../services/global';
   providers: [ProductService]
 })
 export class ProductsComponent implements OnInit {
+  @Input()productsSideBar:Array<any>
+  
   public products: Array<any>
   public url: string
 

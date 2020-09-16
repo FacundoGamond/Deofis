@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'deofis';
+  public productsSideBar: Array<any>;
+
+  constructor() {
+    this.productsSideBar = [];
+  }
+
+  getMarca(event) {
+    this.productsSideBar = event;
+  }
 }

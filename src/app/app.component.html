@@ -3,6 +3,6 @@
 <app-slider></app-slider>
 <section id="center">
     <h1 id="title-destacados">Aprovechá nuestros productos destacados de esta semana!</h1>
-    <app-sidebar></app-sidebar>
-    <app-products></app-products>
+    <app-sidebar (getMarcaSidebar)="getMarca($event)"></app-sidebar>
+    <app-products [productsSideBar]="productsSideBar"></app-products>
 </section>

@@ -27,5 +27,11 @@ export class ProductService {
         return this._http.get(this.url + 'destacados', { headers: headers });
     }
 
+    getMarca(marca): Observable<any> {
+        let headers = new HttpHeaders().set('Content-Type', 'application/json');
+
+        return this._http.get(this.url + 'buscar?termino='+marca, { headers: headers });
+    }
+
     
 }
