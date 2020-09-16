@@ -26,14 +26,21 @@
 }
 
 //Styles
+body {
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.164),
+            rgba(0, 0, 0, 0.5)), url(../images/background.jpg);*/
+
+    background-color: #cccc;
+}
+
 #header {
     display: block;
     position: fixed;
     width: 100%;
     height: 70px;
-    //background-color: royalblue;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.164),
-                rgba(0, 0, 0, 0.5)), url(../images/ofert-color.jpg);
+    background-color: rgba(218, 165, 32, 0.966);
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.164),
+                rgba(0, 0, 0, 0.5)), url(../images/ofert-color.jpg);*/
     background-size: 100%;
     margin: 0px auto;
     border-bottom: 4px solid #ccc;
@@ -45,15 +52,8 @@
         float: left;
         padding-left: 2%;
         cursor: pointer;
-        /*
-        img {
-            display: block;
-            float: left;
-            width: 50px;
-            margin-top: 10px;
-        }
-        */
-        span{
+
+        span {
             display: block;
             float: left;
             width: 50px;
@@ -67,6 +67,29 @@
             font-family: "Breezi";
             margin-top: 9px;
             border: 1px solid white;
+            animation-name: latir;
+            /*Elijo el keyframe*/
+            animation-duration: 2s;
+            /*Elijo la duracion*/
+            animation-iteration-count: infinite;
+            /*Elijo si quiero que sea finita o infinita*/
+            animation-timing-function: ease;
+            /*Cambiamos como se mueve (la curva de movimiento)*/
+        }
+
+        @keyframes latir {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.03);
+                background-color: rgb(185, 148, 53);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
 
         #brand {
@@ -129,7 +152,7 @@
             border-left: none;
         }
 
-        input:focus{
+        input:focus {
             box-shadow: 0px 0px 5px #ccc inset;
         }
 
@@ -153,13 +176,13 @@
 
     }
 
-    #user{
+    #user {
         display: block;
         float: left;
         width: 10%;
         margin-left: 5%;
 
-        span{
+        span {
             display: block;
             float: left;
             width: 30%;
